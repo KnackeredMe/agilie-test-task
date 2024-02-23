@@ -1,0 +1,10 @@
+<app-search (searchEvent)="search($event)" class="search"></app-search>
+<div *ngIf="images" class="images" #imagesContainer>
+  <app-image-card *ngFor="let image of images; index as i" [image]="image" [index]="i"></app-image-card>
+</div>
+<div class="info-wrapper">
+  <app-loader *ngIf="loading"></app-loader>
+  <span *ngIf="!images.length && !loading" class="info">No images found. Try to update search query</span>
+</div>
+
+

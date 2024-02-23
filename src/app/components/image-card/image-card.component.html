@@ -1,0 +1,5 @@
+<div  class="image-card" (load)="imageLoading = false" [ngClass]="{'loading': imageLoading}" (click)="openDialog()">
+  <img class="image" [ngSrc]="image.images['original'].url" fill="true" [priority]="index < 12" alt="{{image.title}}">
+  <span class="image-title">{{image.title}}</span>
+  <span class="image-date">{{image['import_datetime'] | date}}</span>
+</div>

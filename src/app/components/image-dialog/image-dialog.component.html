@@ -1,0 +1,5 @@
+<div class="image-dialog" (load)="imageLoading = false" [ngClass]="{'loading': imageLoading}">
+  <img class="image" [ngSrc]="data.images['original'].url" fill="true" [priority]="true" alt="{{data.title}}">
+  <span class="image-title">{{data.title}}</span>
+  <span class="image-date">{{data['import_datetime'] | date}}</span>
+</div>
