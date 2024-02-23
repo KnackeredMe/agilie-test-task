@@ -29,9 +29,28 @@ export class ImageCardComponent {
 
   openDialog() {
     if (this.image) {
+      let width = Number(this.image.images.original.width);
+      let height = Number(this.image.images.original.height);
+      const aspectRatio = width/height;
+      if (window.innerWidth > 769) {
+        width *= 1.5;
+        height *= 1.5;
+      }
+      if (window.innerWidth < 577) {
+        if (width > window.innerWidth) {
+          width = window.innerWidth * 0.75;
+          height = width / aspectRatio;
+        }
+        if (height > window.innerHeight) {
+          height = window.innerHeight * 0.75;
+          width = height * aspectRatio;
+        }
+      }
       this.dialog.open(ImageDialogComponent, {
-        width: `${Number(this.image.images.original.width) * 1.5}px`,
-        height: `${Number(this.image.images.original.height) * 1.5}px`,
+        width: `${width}px`,
+        height: `${height}px`,
+        maxHeight: `${window.innerHeight - 200}px`,
+        maxWidth: `${window.innerWidth - 100}px`,
         enterAnimationDuration: '300ms',
         exitAnimationDuration: '300ms',
         data: this.image

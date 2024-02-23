@@ -5,10 +5,15 @@
   background: linear-gradient(rgba(127, 127, 127, 0.2), rgba(127, 127, 127, 0.4), rgba(127, 127, 127, 0.2));
   background-size: 100% 400%;
 
+  .image {
+    object-fit: cover;
+  }
+
   .image-title, .image-date {
     position: absolute;
     color: white;
     font-size: 27px;
+    line-height: 1.4em;
     font-weight: 500;
   }
 
@@ -36,6 +41,25 @@
   }
   100% {
     background-position: 50% 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .image-dialog {
+    .image-title, .image-date {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 577px) {
+  .image-dialog {
+    .image-title {
+      top: -50px;
+    }
+    .image-date {
+      bottom: -50px;
+    }
   }
 }
 
