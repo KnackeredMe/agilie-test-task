@@ -1,6 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 import {DatePipe, NgClass, NgOptimizedImage} from "@angular/common";
+import {IGif} from "../../models/gif.model";
 
 @Component({
   selector: 'app-image-dialog',
@@ -16,7 +17,7 @@ import {DatePipe, NgClass, NgOptimizedImage} from "@angular/common";
 export class ImageDialogComponent {
 
   public imageLoading: boolean =  true;
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: IGif) {
   }
 
 }

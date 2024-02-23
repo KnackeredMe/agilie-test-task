@@ -5,6 +5,8 @@ import {debounceTime, Observable, Subject, takeUntil} from "rxjs";
 import {ImageCardComponent} from "../../components/image-card/image-card.component";
 import {SearchComponent} from "../../components/search/search.component";
 import {LoaderComponent} from "../../components/loader/loader.component";
+import {IResponse} from "../../models/response.model";
+import {IGif} from "../../models/gif.model";
 
 @Component({
   selector: 'app-search-page',
@@ -22,8 +24,8 @@ import {LoaderComponent} from "../../components/loader/loader.component";
 })
 export class SearchPageComponent implements OnInit, OnDestroy {
 
-  public images$: Observable<any>;
-  public images: any[] = [];
+  public images$: Observable<IResponse>;
+  public images: IGif[] = [];
   private query: string = '';
   private offset: number = 0;
   private destroy$: Subject<boolean> = new Subject<boolean>();
@@ -43,7 +45,7 @@ export class SearchPageComponent implements OnInit, OnDestroy {
     this.images$.pipe(debounceTime(300),
       takeUntil(this.destroy$))
       .subscribe({
-        next: (res: any) => {
+        next: (res: IResponse) => {
           this.images = this.images.concat(res.data);
           this.loading = false;
         }

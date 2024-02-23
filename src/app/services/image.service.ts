@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {ErrorHandlerService} from "./error-handler.service";
 import {catchError, Observable} from "rxjs";
 import {environment} from "../../environments/environment";
+import {IResponse} from "../models/response.model";
 
 @Injectable({
   providedIn: 'root'
@@ -17,13 +18,13 @@ export class ImageService {
     private errorHandler: ErrorHandlerService
   ) { }
 
-  getTrending(offset: number): Observable<any[]> {
-    return this.http.get<any[]>( this.baseUrl + `gifs/trending?api_key=${this.apiKey}&offset=${offset}&limit=24`)
+  getTrending(offset: number): Observable<IResponse> {
+    return this.http.get<IResponse>( this.baseUrl + `gifs/trending?api_key=${this.apiKey}&offset=${offset}&limit=24`)
       .pipe(catchError(this.errorHandler.handleError));
   }
 
-  getSearch(query: string, offset: number): Observable<any[]> {
-    return this.http.get<any[]>( this.baseUrl + `gifs/search?api_key=${this.apiKey}&q=${query}&offset=${offset}&limit=24`)
+  getSearch(query: string, offset: number): Observable<IResponse> {
+    return this.http.get<IResponse>( this.baseUrl + `gifs/search?api_key=${this.apiKey}&q=${query}&offset=${offset}&limit=24`)
       .pipe(catchError(this.errorHandler.handleError));
   }
 }
