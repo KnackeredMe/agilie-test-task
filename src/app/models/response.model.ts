@@ -8,14 +8,14 @@ export interface IResponse {
 
 export interface IPagination {
   offset: string;
-  total_count: string;
+  totalCount: string;
   count: number;
 }
 
 export interface IMeta {
   msg: string;
   status: number;
-  response_id: string;
+  responseId: string;
 }
 
 

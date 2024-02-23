@@ -1,24 +1,24 @@
 export interface IImages {
-  fixed_height: IFixedHeight;
-  fixed_height_still: IFixedHeightStill;
-  fixed_height_downsampled: IFixedHeightDownsampled;
-  fixed_width: IFixedWidth;
-  fixed_width_still: IFixedWidthStill;
-  fixed_width_downsampled: IFixedWidthDownsamepled;
-  fixed_height_small: IFixedHeightSmall;
-  fixed_height_small_still: IFixedHeightSmallStill;
-  fixed_width_small: IFixedWidthSmall;
-  fixed_width_small_still: IFixedWidthSmallStill;
+  fixedHeight: IFixedHeight;
+  fixedHeightStill: IFixedHeightStill;
+  fixedHeightDownsampled: IFixedHeightDownsampled;
+  fixedWidth: IFixedWidth;
+  fixedWidthStill: IFixedWidthStill;
+  fixedWidthDownsampled: IFixedWidthDownsamepled;
+  fixedHeightSmall: IFixedHeightSmall;
+  fixedHeightSmallStill: IFixedHeightSmallStill;
+  fixedWidthSmall: IFixedWidthSmall;
+  fixedWidthSmallStill: IFixedWidthSmallStill;
   downsized: IDownsized;
-  downsized_still: IDownsizedStill;
-  downsized_large: IDownsizedLarge;
-  downsized_medium: IDownsizedMedium;
-  downsized_small: IDownsizedSmall;
+  downsizedStill: IDownsizedStill;
+  downsizedLarge: IDownsizedLarge;
+  downsizedMedium: IDownsizedMedium;
+  downsizedSmall: IDownsizedSmall;
   original: IOriginal;
-  original_still: IOriginalStill;
+  originalStill: IOriginalStill;
   looping: ILooping;
   preview: IPreview;
-  preview_gif: IPreviewGif;
+  previewGif: IPreviewGif;
 }
 
 export interface IFixedHeight {
@@ -27,9 +27,9 @@ export interface IFixedHeight {
   height: string
   size: string;
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IFixedHeightStill {
@@ -44,7 +44,7 @@ export interface IFixedHeightDownsampled {
   height: string;
   size: string;
   webp: string;
-  webp_size: string
+  webpSize: string
 }
 
 export interface IFixedWidth {
@@ -53,9 +53,9 @@ export interface IFixedWidth {
   height: string;
   size: string;
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IFixedWidthStill {
@@ -70,7 +70,7 @@ export interface IFixedWidthDownsamepled {
   height: string;
   size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IFixedHeightSmall {
@@ -79,9 +79,9 @@ export interface IFixedHeightSmall {
   height: string;
   size: string;
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IFixedHeightSmallStill {
@@ -96,9 +96,9 @@ export interface IFixedWidthSmall {
   height: string;
   size: string;
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IFixedWidthSmallStill {
@@ -138,7 +138,7 @@ export interface IDownsizedSmall {
   mp4: string;
   width: string;
   height: string;
-  mp4_size: string;
+  mp4Size: string;
 }
 
 export interface IOriginal {
@@ -148,9 +148,9 @@ export interface IOriginal {
   size: string;
   frames: string;
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   webp: string;
-  webp_size: string;
+  webpSize: string;
 }
 
 export interface IOriginalStill {
@@ -165,7 +165,7 @@ export interface ILooping {
 
 export interface IPreview {
   mp4: string;
-  mp4_size: string;
+  mp4Size: string;
   width: string;
   height: string;
 }

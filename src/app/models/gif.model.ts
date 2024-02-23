@@ -5,28 +5,28 @@ export interface IGif {
   id: string;
   slug: string;
   url: string;
-  bitly_url: string;
-  embed_url: string;
+  bitlyUrl: string;
+  embedUrl: string;
   username: string;
   source: string;
   rating: string;
-  content_url: string;
+  contentUrl: string;
   user: IUser;
-  source_tld: string;
-  source_post_url: string;
-  update_datetime: string;
-  create_datetime: string;
-  import_datetime: string;
-  trending_datetime: string;
+  sourceTld: string;
+  sourcePostUrl: string;
+  updateDatetime: string;
+  createDatetime: string;
+  importDatetime: string;
+  trendingDatetime: string;
   images: IImages;
   title: string;
-  alt_text: string;
+  altText: string;
 }
 
 export interface IUser {
-  avatar_url: string;
-  banner_url: string;
-  profile_url: string;
+  avatarUrl: string;
+  bannerUrl: string;
+  profileUrl: string;
   username: string;
-  display_name: string
+  displayName: string
 }
